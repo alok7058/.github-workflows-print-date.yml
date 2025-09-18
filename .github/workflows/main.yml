@@ -1,0 +1,17 @@
+name: Print Date Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print today's date (UTC)
+        run: date
